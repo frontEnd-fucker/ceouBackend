@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>课程管理</title>
+<!--                       CSS                       -->
+<!-- Reset Stylesheet -->
+<link rel="stylesheet" href="resources/css/reset.css" type="text/css" media="screen" />
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="resources/css/style.css" type="text/css" media="screen" />
+<!-- Invalid Stylesheet. This makes stuff look pretty. Remove it if you want the CSS completely valid -->
+<link rel="stylesheet" href="resources/css/invalid.css" type="text/css" media="screen" />
+<!--                       Javascripts                       -->
+<!-- jQuery -->
+<script type="text/javascript" src="resources/scripts/jquery-1.3.2.min.js"></script>
+<!-- jQuery Configuration -->
+<script type="text/javascript" src="resources/scripts/simpla.jquery.configuration.js"></script>
+<!-- Facebox jQuery Plugin -->
+<script type="text/javascript" src="resources/scripts/facebox.js"></script>
+<!-- jQuery WYSIWYG Plugin -->
+<script type="text/javascript" src="resources/scripts/jquery.wysiwyg.js"></script>
+<!-- jQuery Datepicker Plugin -->
+<!--<script type="text/javascript" src="resources/scripts/jquery.datePicker.js"></script>-->
+<!--<script type="text/javascript" src="resources/scripts/jquery.date.js"></script>-->
+<script src="resources/scripts/3levelSelector.js"></script>
+</head>
+<body>
+<div id="body-wrapper">
+  <!-- Wrapper for the radial gradient background -->
+  <div id="sidebar">
+    <div id="sidebar-wrapper">
+      <!-- Sidebar with logo and menu -->
+      <h1 id="sidebar-title"><a href="#">Simpla Admin</a></h1>
+      <!-- Logo (221px wide) -->
+      <a href="#"><img id="logo" src="resources/images/logo.png" alt="Simpla Admin logo" /></a>
+      <!-- Sidebar Profile links -->
+      <div id="profile-links"> Hello, <a href="#" title="Edit your profile">国亮</a><br />
+        <br />
+        <a href="#" title="View the Site">进入官网</a> | <a href="#" title="Sign Out">登出</a> </div>
+      <ul id="main-nav">
+        <!-- Accordion Menu -->
+          <!-- Add the class "no-submenu" to menu items with no sub menu -->
+        <li> <a href="#" class="nav-top-item current">
+          <!-- Add the class "current" to current menu item -->
+          课程管理 </a>
+          <ul>
+            <li><a href="#">快速添加课程</a></li>
+            <li><a class="current" href="#">课程管理</a></li>
+            <!-- Add class "current" to sub menu items also -->
+          </ul>
+        </li>
+        <li> <a href="#" class="nav-top-item"> 文章管理 </a>
+          <ul>
+            <li><a href="#">快速添加文章</a></li>
+            <li><a href="#">文章管理</a></li>
+          </ul>
+        </li>
+        <li> <a href="#" class="nav-top-item"> 会员管理 </a>
+          <ul>
+            <li><a href="#">快速添加会员</a></li>
+            <li><a href="#">会员管理</a></li>
+          </ul>
+        </li>
+        <li> <a href="#" class="nav-top-item"> 帐号管理 </a>
+          <ul>
+            <li><a href="#">帐号管理</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- End #main-nav -->
+    </div>
+  </div>
+  <!-- End #sidebar -->
+  <div id="main-content">
+    <!-- Main Content Section with everything -->
+    <!-- Page Head -->
+    <h2>Welcome</h2>
+    
+    <!-- 筛选器 -->
+    <form>
+        <p>
+            <label>快速查询：</label>
+            <input type="text" />
+            <input type="submit" />
+        </p>
+    </form>    
+    <form>
+    	<p>
+      	<label>按模块筛选：</label>
+        <select id="mLevel_1">
+        	<option class="default-option">请选择...</option>
+          <option>倍增学院</option>
+          <option>名师堂</option>
+          <option>商学院</option>
+          <option>在线学历院</option>
+        </select>
+        <select id="mLevel_2">
+            <option class="default-option">请选择...</option>
+        </select>     
+        <input type="submit" />    
+      </p>
+    </form>
+    <form>
+        <p>
+            <label for="level_1">按分类筛选：</label>
+            <select id="level_1">
+                <option class="default-option">请选择...</option>
+                <option value="1">通用</option>
+                <option value="2">行业</option>
+            </select>
+            <select id="level_2">
+                <option class="default-option">请选择...</option>
+            </select>
+            <select id="level_3">
+                <option class="default-option">请选择...</option>
+            </select>  
+            <input type="submit" /> 
+        </p>  
+    </form>   
+    <!-- end 筛选器 -->
+    
+    <div class="content-box">
+      <!-- Start Content Box -->
+      <div class="content-box-header">
+        <h3>课程管理</h3>
+        <!--<ul class="content-box-tabs">
+          <li><a href="#tab1" class="default-tab">Table</a></li>
+          <li><a href="#tab2">Forms</a></li>
+        </ul>-->
+        <div class="clear"></div>
+      </div>
+      <!-- End .content-box-header -->
+      <div class="content-box-content">
+        <div class="tab-content default-tab" id="tab1">
+          <!-- This is the target div. id must match the href of this div's tab -->
+          <table>
+            <thead>
+              <tr>
+                <th>课程名称</th>
+                <th>讲师名</th>
+                <th>评分</th>
+                <th>所属模块</th>
+                <th>总类别</th>
+                <th>二级分类</th>
+                <th>三级分类</th>
+                <th>封面图</th>
+                <th>课程权限</th>
+                <th>课程价格</th>
+                <th>优先级</th>
+                <th>更新人</th>
+                <th>更新时间</th>
+                <th>课程状态</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <td colspan="16">
+                  <div class="pagination"> <a href="#" title="First Page">&laquo; First</a><a href="#" title="Previous Page">&laquo; Previous</a> <a href="#" class="number" title="1">1</a> <a href="#" class="number" title="2">2</a> <a href="#" class="number current" title="3">3</a> <a href="#" class="number" title="4">4</a> <a href="#" title="Next Page">Next &raquo;</a><a href="#" title="Last Page">Last &raquo;</a> </div>
+                  <!-- End .pagination -->
+                  <div class="clear"></div>
+                </td>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr>
+                <td>消费者行为心理学1</td>
+                <td>赵喜刚</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td>3</td>
+                <td>130001</td>
+                <td>img/couid455.jpg</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td></td>
+                <td>2014-02-26 00:00:00</td>
+                <td>1</td>
+                <td>
+                  <!-- Icons -->
+                  <a href="#" title="查看详细"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a> 
+                  <a href="#" title="编辑"><img src="resources/images/icons/pencil.png" alt="Edit" /></a> 
+                  <a href="#" title="删除"><img src="resources/images/icons/cross.png" alt="Delete" /></a>       
+                </td> 
+              </tr>
+              <tr>
+                <td>消费者行为心理学1</td>
+                <td>赵喜刚</td>
+                <td>0</td>		
+                <td>1</td>
+                <td>1</td>
+                <td>3</td>
+                <td>130001</td>
+                <td>img/couid455.jpg</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td></td>
+                <td>2014-02-26 00:00:00</td>
+                <td>1</td>
+                <td>
+                  <!-- Icons -->
+                  <a href="#" title="查看详细"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a> 
+                  <a href="#" title="编辑"><img src="resources/images/icons/pencil.png" alt="Edit" /></a> 
+                  <a href="#" title="删除"><img src="resources/images/icons/cross.png" alt="Delete" /></a>       
+                </td>            
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- End #tab1 -->
+      </div>
+      <!-- End .content-box-content -->
+    </div>
+    <!-- End .content-box -->	
+    <div class="clear"></div>
+
+    <div id="footer"> <small>
+      <!-- Remove this notice or replace it with whatever you want -->
+      &#169; Copyright 2014 www.CEOU.com | <a href="#">Top</a> </small> </div>
+    <!-- End #footer -->
+  </div>
+  <!-- End #main-content -->
+</div>
+</body>
+<!-- Download From www.exet.tk-->
+</html>

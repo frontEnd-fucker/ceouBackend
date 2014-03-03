@@ -1,8 +1,8 @@
 // JavaScript Document
 $(function() {
-	$('.J_triggerToggle').toggle(function() {
+	
+	//编辑课程信息页面点击修改弹出select
+	$('.J_triggerToggle').click(function() {
 		$(this).parent('p').next('.J_toggleP').show();
-	}, function() {
-		$(this).parent('p').next('.J_toggleP').hide();
 	});
 });
